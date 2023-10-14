@@ -1,38 +1,432 @@
-.App {
-  text-align: center;
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brandName {
+  margin: 65px 0 0 250px;
+  font-size: 3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ham {
+  margin: 75px 250px 0 0;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .selected {
+  color: #fff;
+} */
+
+.navMenu {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  margin: 150px 250px 0 0;
+  z-index: 9;
+}
+
+.navMenu li {
   color: white;
+  margin: 60px 0;
+  font-size: 32px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0d0d;
+  color: white;
+  z-index: 999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.brandNameNav {
+  position: relative;
+  color: #0d0d0d;
+  -webkit-text-stroke: 0.1vw grey;
+}
+
+.brandNameContainer h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  -webkit-text-stroke: 0vw grey;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.tagLineContainer {
+  margin: 200px 0 0 250px;
+}
+
+.tagLine {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+}
+
+.menuContainer {
+  margin: 50px 0 0 220px;
+}
+
+/* ScrollUpAnimation.css */
+
+.scroll-link::after {
+  content: "";
+  display: block;
+  width: 0; /* Initially set the width to 0 */
+  height: 1px; /* Border thickness */
+  background-color: black; /* Border color */
+  transition: width 0.5s ease-in-out; /* Add a transition for width */
+}
+
+.scroll-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 20px;
+  border-bottom: 1px solid black;
+  transition: border-bottom 5s ease-in-out;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.link-text {
+  display: block;
+  padding: 10px;
+  transition: transform 0.5s ease-in-out;
+
+  /* border-bottom: 1px solid black; */
+}
+
+.scroll-content {
+  color: #333;
+  padding: 10px;
+  position: absolute;
+  bottom: -100%; /* Initially hide content below the link */
+  left: 0;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.scroll-link:hover {
+  border-bottom: 0px;
+}
+
+.scroll-link:hover .link-text {
+  transform: translateY(-100%); /* Slide up the link text */
+}
+
+.scroll-link:hover .scroll-content {
+  transform: translateY(-100%); /* Slide up the content from below */
+}
+
+.carousel {
+  margin: 300px 0 0 500px;
+  cursor: pointer;
+}
+
+.Bottomcarousel {
+  margin: 300px 500px 200px 0;
+  cursor: pointer;
+}
+
+.taglineTwoContainer {
+  width: 100%;
+  height: 100%;
+  margin: 200px 0 0 500px;
+}
+
+.taglineTwoContainer h1 {
+  line-height: 80px;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.taglineTwoContainer p {
+  margin-top: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  position: relative;
+  top: 15px;
+}
+
+.lineHeading {
+  display: flex;
+  flex-direction: row;
+  margin: 65px 0 0 250px;
+}
+
+.lineHeading h4 {
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  color: white;
+  margin: 200px 0 0 0;
+}
+
+.brandContainer h1 {
+  margin: 130px 0 0 250px;
+  font-size: 5em;
+}
+
+.brandContainer p {
+  margin: 0 0 0 250px;
+  font-size: 2em;
+}
+
+.copyright {
+  margin: 70px 0 0 250px;
+  color: grey;
+}
+
+.footerLeft {
+  position: relative;
+  float: left;
+}
+
+.footerRight {
+  position: relative;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.contactDetails {
+  margin: 130px 0 0 250px;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 200;
+}
+
+.mobile {
+  display: none;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .brandName {
+    margin: 60px 0 0 27px;
+    font-size: 6em;
+  }
+
+  .ham {
+    margin: 65px 15px 0 0;
+  }
+
+  .brandNameContainer {
+    display: none;
+  }
+
+  .navMenu {
+    margin: 150px 60px 0 0;
+  }
+
+  .tagLineContainer {
+    margin: 150px 0 0 10px;
+    padding: 20px;
+  }
+
+  .tagLine {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .menuContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0 0 0;
+  }
+
+  .carousel {
+    margin: 0 0 0 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .taglineTwoContainer {
+    margin: 10px 0 0 10px;
+    padding: 20px;
+  }
+
+  .taglineTwoContainer h1 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .taglineTwoContainer p {
+    font-size: 23px;
+    font-weight: 200;
+    line-height: normal;
+    word-break: keep-all;
+    word-wrap: normal;
+    margin: 0 0 0 0;
+  }
+
+  .Bottomcarousel {
+    margin: 0 10px 0 0;
+  }
+
+  .footerContainer {
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footerLeft {
+    float: none;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
+  .brandContainer h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .brandContainer p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footerRight {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 10%;
+    line-height: 1.5;
+  }
+
+  .contactDetails {
+    display: block;
+    font-size: 1.3em;
+    margin: 60px 0 0 0;
+    padding: 0;
+  }
+
+  .down {
+    margin-top: 50px;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    position: relative;
+    top: 3%;
+    bottom: 0;
+    margin: 0 0 0 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .navMenu li {
+    margin: 30px;
+    font-size: 26px;
+  }
+  .footerContainer {
+    width: 100%;
+    height: 370px;
+    margin-top: 100px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+  }
+
+  .footerLeft {
+    position: relative;
+    float: left;
+  }
+
+  .footerRight {
+    position: relative;
+    bottom: 230px;
+    left: 100px;
+    color: white;
+    float: right;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contactDetails {
+    margin: 0 0 0 250px;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
