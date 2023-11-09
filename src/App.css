@@ -21,12 +21,12 @@
 
 .ham {
   margin: 75px 250px 0 0;
-  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  z-index: 9999;
 }
 
-/* .selected {
+.selected {
   color: #fff;
-} */
+}
 
 .navMenu {
   display: flex;
@@ -251,8 +251,25 @@
 .projectContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  flex-grow: 200;
+  margin: 200px 0 0 0;
+}
+
+.projectcard {
+  margin: 30px;
+}
+
+.mapContainer {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map{
+  width: 100%;
+  height: 800px;
+  margin-top: 100px;
 }
 
 .mobile {
@@ -273,6 +290,8 @@ ol,
 ul {
   list-style: none;
 }
+
+/*Mobile Phone*/
 
 @media (max-width: 767px) {
   .headerContainer {
@@ -401,7 +420,19 @@ ul {
     bottom: 0;
     margin: 0 0 0 10%;
   }
+
+  .projectContainer {
+    margin: 0px 0 0 0;
+  }
+
+  .map{
+    width: 600px;
+    height: 400px;
+    margin-top: 100px;
+  }
 }
+
+/*Tab and Laptops*/
 
 @media (min-width: 768px) and (max-width: 1000px) {
   .navMenu li {

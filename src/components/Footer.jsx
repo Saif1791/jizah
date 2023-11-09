@@ -1,8 +1,7 @@
 import React from "react";
-
+import { ContactDetails } from "./ContactDetails";
 function footer() {
   var year = new Date().getFullYear();
-
   return (
     <div className="footerContainer">
       <div className="footerLeft">
@@ -14,19 +13,7 @@ function footer() {
           <p> &copy; {year} Jiza Architects </p>
         </div>
       </div>
-
-      <div className="footerRight">
-        <div className="contactDetails up">
-          <p>Lorem Ipsum</p>
-          <p>loremipsum@mail.com</p>
-          <p>+91 1234567890</p>
-        </div>
-        <div className="contactDetails down">
-          <p>Lorem Ipsum</p>
-          <p>loremipsum@mail.com</p>
-          <p>+91 1234567890</p>
-        </div>
-      </div>
+      <ContactDetails />
       <div className="copyright mobile">
         <p> &copy; {year} Jiza Architects </p>
       </div>

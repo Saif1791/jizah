@@ -7,7 +7,7 @@ function Projects() {
   return (
     <div>
       <Header />
-      <Tagline Tagline="Lorem ipsim lorem ipsum" />
+      <Tagline Tagline="Projects" />
       <Project />
       <Footer />
     </div>

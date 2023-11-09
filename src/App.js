@@ -7,25 +7,6 @@ import Projects from "./pages/Projects";
 
 function App() {
   return (
-    // <div>
-    //   {/* <Parallax pages={3}>
-    //     <Header />
-    //     <Tagline />
-    //     <Menubar />
-    //     <Mainslider />
-    //     <TaglineTwo />
-    //     <ParallaxLayer offset={2.7} speed={2.5}>
-    //       <div>
-    //         <BottomCarousel />
-    //       </div>
-    //     </ParallaxLayer>
-    //     <ParallaxLayer offset={2.5} speed={2.7}>
-    //       <div>
-    //         <Footer />
-    //       </div>
-    //     </ParallaxLayer>
-    //   </Parallax> */}
-    // </div>
     <div>
       <BrowserRouter>
         <Routes>

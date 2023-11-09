@@ -7,7 +7,8 @@ import { CardActionArea } from "@mui/material";
 
 function ProjectCard({ projects }) {
   return (
-    <Card sx={{ maxWidth: 345 }} variant="outlined">
+    <div className="projectcard">
+    <Card sx={{ maxWidth: 450 }} variant="outlined">
       <CardActionArea>
         <CardMedia
           component="img"
@@ -22,6 +23,7 @@ function ProjectCard({ projects }) {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
   );
 }
 
