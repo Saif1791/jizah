@@ -18,7 +18,6 @@ function Header() {
             rounded
             color="black"
             size={32}
-            hideOutline={true}
             duration={0.8}
             distance="sm"
             toggled={clicked}

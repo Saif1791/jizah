@@ -8,21 +8,21 @@ import { CardActionArea } from "@mui/material";
 function ProjectCard({ projects }) {
   return (
     <div className="projectcard">
-    <Card sx={{ maxWidth: 450 }} variant="outlined">
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="400"
-          image={projects.image}
-          alt={projects.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {projects.title}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+      <Card sx={{ maxWidth: 450 }} variant="outlined">
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="400"
+            image={projects.image}
+            alt={projects.title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {projects.title}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </div>
   );
 }
